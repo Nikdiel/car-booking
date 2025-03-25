@@ -1,0 +1,54 @@
+[
+    {
+        "image": "https://th.bing.com/th/id/OIP.mQfRPCheXhFm5Kq7zlyQKgHaEK?w=1280&h=720&rs=1&pid=ImgDetMain",
+        "car": "BMW X5",
+        "price": "5000$",
+        "description": "Премиальный кроссовер с динамичным дизайном и мощным двигателем. Отличный выбор для комфортных поездок и путешествий.",
+        "specs": {
+            "engine": "3.0L, 340 л.с.",
+            "transmission": "Автоматическая, 8-ступенчатая",
+            "drive": "Полный",
+            "seats": 5,
+            "fuel": "Бензин"
+        }
+    },
+    {
+        "image": "https://th.bing.com/th/id/R.2be289ee85427d453a8b1df742e93dd3?rik=W9yC8g34USRFoQ&pid=ImgRaw&r=0",
+        "car": "Audi Q7",
+        "price": "6000$",
+        "description": "Просторный и элегантный внедорожник с передовыми технологиями и отличной управляемостью. Подходит для семейных поездок и деловых поездок.",
+        "specs": {
+            "engine": "3.0L, 335 л.с.",
+            "transmission": "Автоматическая, 8-ступенчатая",
+            "drive": "Полный",
+            "seats": 7,
+            "fuel": "Бензин"
+        }
+    },
+    {
+        "image": "https://www.futurecarstalk.com/wp-content/uploads/2022/07/2024-Toyota-Camry-Hybrid-Exterior.png",
+        "car": "Toyota Camry",
+        "price": "4500$",
+        "description": "Надежный и экономичный седан с просторным салоном. Идеальный вариант для комфортных поездок по городу и дальних путешествий.",
+        "specs": {
+            "engine": "2.5L, 206 л.с.",
+            "transmission": "Автоматическая, 8-ступенчатая",
+            "drive": "Передний",
+            "seats": 5,
+            "fuel": "Бензин"
+        }
+    },
+    {
+        "image": "https://images.caricos.com/m/mercedes-benz/2020_mercedes-benz_gle_uk/images/1920x1080/2020_mercedes-benz_gle_uk_15_1920x1080.jpg",
+        "car": "Mercedes-Benz GLE",
+        "price": "7000$",
+        "description": "Роскошный и технологичный внедорожник с премиальным интерьером и мощным двигателем. Обеспечивает комфорт и безопасность на любых дорогах.",
+        "specs": {
+            "engine": "3.0L, 367 л.с.",
+            "transmission": "Автоматическая, 9-ступенчатая",
+            "drive": "Полный",
+            "seats": 5,
+            "fuel": "Бензин"
+        }
+    }
+]
