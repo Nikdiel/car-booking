@@ -10,9 +10,4 @@
         echo "Ошибка: ".$conn->connect_errno . "<br>";
         echo "Описание: " . $conn->connect_error;
     }
-
-    if(!(isset($_SESSION['logged-in']))){
-        header('Location: login.php');
-        exit();
-    }
 ?>

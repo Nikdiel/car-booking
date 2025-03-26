@@ -1,7 +1,37 @@
 <?php 
     session_start();
-
     require "connect.php";
+
+    if(!(isset($_SESSION['logged-in']))){
+        header('Location: login.php');
+        exit();
+    }
+
+    if($_SERVER["REQUEST_METHOD"] == "POST"){
+        $data = json_decode(file_get_contents("php://input"), true);
+
+
+        $car = $data["car"] ?? NULL;
+        $price = $data["price"] ?? NULL;
+        $day = $data["day"] ?? NULL;
+        $action = $data["action"] ?? NULL;
+
+        if (!isset($car, $price, $day, $action)) {
+            echo json_encode(["status"=>"error", "massage"=>"Данные отсутствуют"]);
+            exit();
+        }
+
+        if($action == "book"){
+            $booking = "INSERT INTO book (car, price, date, duration) VALUES (?, ?, NOW(), ?)";
+            $stmt = $conn->prepare($booking);
+            
+            if($stmt){
+                $stmt->bind_param("sdi", $car, $price, $day);
+                $res = $stmt->execute();
+            }
+        }
+    }
+    $conn->close();
 ?>
 
 <!DOCTYPE html>
@@ -37,6 +67,7 @@
                             <button onclick="book('.$a.')">Забронировать</button>
                         </div>
                     ';
+                    
                 }
             ?>
         </section>
