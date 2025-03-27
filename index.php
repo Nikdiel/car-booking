@@ -22,11 +22,11 @@
         }
 
         if($action == "book"){
-            $booking = "INSERT INTO book (car, price, date, duration) VALUES (?, ?, NOW(), ?)";
+            $booking = "INSERT INTO book (user_id, car, price, date, duration) VALUES (?, ?, ?, NOW(), ?)";
             $stmt = $conn->prepare($booking);
             
             if($stmt){
-                $stmt->bind_param("sdi", $car, $price, $day);
+                $stmt->bind_param("isdi", $_SESSION['user_id'], $car, $price, $day);
                 $res = $stmt->execute();
             }
         }

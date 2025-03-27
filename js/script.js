@@ -9,8 +9,8 @@ fetch("txt.json")
 
 function book(a) {
     let b = jsonData[a]
-    let c = prompt(`Вы уверены что хотите забронировать ${b.car}?\n 1.да 2.нет`)
-    if(c.toLowerCase() == "да" || c == 1){
+    let c = confirm(`Вы уверены что хотите забронировать ${b.car}?`)
+    if(c){
         let day = prompt("На какое количество дней?");
         let book = {
             car: b.car,
