@@ -4,6 +4,8 @@
 
     $login = $_POST["login"];
     $password = $_POST["password"];
+    $name = $_POST["name"];
+    $email = $_POST["email"];
 
     $sql1 = "SELECT * FROM `users` WHERE login = '$login'";
 
@@ -14,16 +16,16 @@
             header("Location: register.php");
             exit();
         }
-    }else{
-        $sql = "INSERT INTO users (login, password) VALUES (?, ?)";
-        $stmt = $conn->prepare($sql);
+    }
 
-        if($stmt){
-            $stmt->bind_param("ss", $login, $password);
-            if($stmt->execute()){
-                header("location: login.php");
-                exit();
-            }
+    $sql = "INSERT INTO users (login, password, name, email, reg_date) VALUES (?, ?, ?, ?, NOW())";
+    $stmt = $conn->prepare($sql);
+
+    if($stmt){
+        $stmt->bind_param("ssss", $login, $password, $name, $email);
+        if($stmt->execute()){
+            header("location: login.php");
+            exit();
         }
     }
     

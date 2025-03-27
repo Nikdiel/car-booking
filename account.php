@@ -41,7 +41,7 @@
             <ul>
                 <li><strong>Имя:</strong> <?=$ud["name"]?></li>
                 <li><strong>Email:</strong> <?=$ud["email"]?></li>
-                <li><strong>Дата регистрации:</strong> <?=$ud["reg-date"]?></li>
+                <li><strong>Дата регистрации:</strong> <?=$ud["reg_date"]?></li>
             </ul>
         </section>
 
